@@ -2,10 +2,8 @@ package mycompany.sebastian.portfolioBackend.Model;
 
 //import sun.util.resources.Bundles;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class ProjectData {
@@ -13,49 +11,52 @@ public class ProjectData {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
-    String name;
-
-    String sourceUrl;
-
-    String imageUrl;
+    String title;
 
     String description;
 
+    String gitUrl;
+
+    String actionOnClick;
+
+    String action;
+
+    @ManyToMany
+    @JoinTable(
+      name = "used_technology",
+      joinColumns = @JoinColumn(name = "project_id"),
+      inverseJoinColumns = @JoinColumn(name = "technology_id"))
+    Set<Technology> technologies;
+
     public ProjectData() {
+    }
+
+    public ProjectData(String title, String description, String gitUrl, String actionOnClick, Set<Technology> technologies) {
+        this.title = title;
+        this.description = description;
+        this.gitUrl = gitUrl;
+        this.actionOnClick = actionOnClick;
+        this.technologies = technologies;
+    }
+
+    public Set<Technology> getTechnologies() {
+        return technologies;
+    }
+
+    public void setTechnologies(Set<Technology> technologies) {
+        this.technologies = technologies;
     }
 
     public int getId() {
         return id;
     }
 
-    public ProjectData(String sourceUrl, String imageUrl, String description) {
-        this.sourceUrl = sourceUrl;
-        this.imageUrl = imageUrl;
-        this.description = description;
+    public String getTitle() {
+        return title;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSourceUrl() {
-        return sourceUrl;
-    }
-
-    public void setSourceUrl(String sourceUrl) {
-        this.sourceUrl = sourceUrl;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
@@ -64,5 +65,21 @@ public class ProjectData {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getGitUrl() {
+        return gitUrl;
+    }
+
+    public void setGitUrl(String gitUrl) {
+        this.gitUrl = gitUrl;
+    }
+
+    public String getActionOnClick() {
+        return actionOnClick;
+    }
+
+    public void setActionOnClick(String actionOnClick) {
+        this.actionOnClick = actionOnClick;
     }
 }
