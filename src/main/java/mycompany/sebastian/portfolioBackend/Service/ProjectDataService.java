@@ -26,9 +26,9 @@ public class ProjectDataService {
     }
 
     public void addUpdateProject(ProjectData projectData){
-        if(projectData.getName()==null ||
-                projectData.getSourceUrl() == null ||
-                projectData.getImageUrl() == null||
+        if(projectData.getTitle()==null ||
+                projectData.getGitUrl() == null ||
+                projectData.getActionOnClick() == null||
                 projectData.getDescription() == null) {
             return;
         }
