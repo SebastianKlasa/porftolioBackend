@@ -2,7 +2,7 @@ var arr = [];
 var arrID = [];
 var projCount = 0;
 //endpoint
-var endpointConst = "http://localhost:8090/";
+var endpointConst = "https://portfolio-app2.herokuapp.com/";
 var request;
 
 function getProjectTitles(){
