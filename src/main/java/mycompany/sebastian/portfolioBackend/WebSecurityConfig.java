@@ -56,6 +56,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/project").permitAll()//.hasRole("ADMIN")
                 //mail
                 .antMatchers(HttpMethod.POST, "/mail").permitAll()//.hasRole("ADMIN")
+                //db console
+                .antMatchers(HttpMethod.POST, "/console").permitAll()//.hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/console").permitAll()//.hasRole("ADMIN")
+                .antMatchers(HttpMethod.PUT, "/console").permitAll()//.hasRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/console").permitAll()//.hasRole("ADMIN")
             .and()
                 .formLogin()
                 .permitAll()
@@ -63,6 +68,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .permitAll().and()
             .csrf().disable();
+        http.headers().frameOptions().disable();
     }
     @Bean
     public PasswordEncoder passwordEncoder(){
