@@ -45,12 +45,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //projectData permissions
                 .antMatchers(HttpMethod.GET, "/projectData/id/{id}").permitAll()//.hasRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/projectData").permitAll()//.hasRole("ADMIN")
-                .antMatchers(HttpMethod.POST, "/projectData").hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/projectData").permitAll()//hasRole("ADMIN")
                 .antMatchers(HttpMethod.PUT, "/projectData").hasRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/projectData").hasRole("ADMIN")
                 //technologies
                 .antMatchers(HttpMethod.GET, "/technologies").permitAll()//.hasRole("ADMIN")
-                .antMatchers(HttpMethod.POST, "/technologies").hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/technologies").permitAll()//hasRole("ADMIN")
                 //home
                 .antMatchers(HttpMethod.GET, "/").permitAll()//.hasRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/project").permitAll()//.hasRole("ADMIN")
@@ -71,12 +71,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @EventListener(ApplicationReadyEvent.class)
     public void addUser(){
-//        UserData appUser1 = new UserData("UserJan", passwordEncoder().encode("123"), "ROLE_USER");
-//        UserData appUser2 = new UserData("AdminJan", passwordEncoder().encode("123"), "ROLE_ADMIN");
-//       // UserData appUser3 = new UserData(null, null, null);
-//        userDataRepository.save(appUser1);
-//        userDataRepository.save(appUser2);
-//      //  userDataRepository.save(appUser3);
+        UserData appUser1 = new UserData("UserJan", passwordEncoder().encode("123"), "ROLE_USER");
+        UserData appUser2 = new UserData("AdminJan", passwordEncoder().encode("123"), "ROLE_ADMIN");
+       // UserData appUser3 = new UserData(null, null, null);
+        userDataRepository.save(appUser1);
+        userDataRepository.save(appUser2);
+      //  userDataRepository.save(appUser3);
     }
 
 }
