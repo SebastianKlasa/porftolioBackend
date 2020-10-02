@@ -31,12 +31,21 @@ public class ProjectData {
     public ProjectData() {
     }
 
-    public ProjectData(String title, String description, String gitUrl, String actionOnClick, Set<Technology> technologies) {
+    public ProjectData(String title, String description, String gitUrl, String actionOnClick, String action, Set<Technology> technologies) {
         this.title = title;
         this.description = description;
         this.gitUrl = gitUrl;
         this.actionOnClick = actionOnClick;
+        this.action = action;
         this.technologies = technologies;
+    }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
     }
 
     public Set<Technology> getTechnologies() {
