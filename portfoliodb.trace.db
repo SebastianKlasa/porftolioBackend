@@ -1,0 +1,4 @@
+2020-10-02 14:12:07 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabela "TECHNOLOGIES" nie istnieje
+Table "TECHNOLOGIES" not found; SQL statement:
+select * from TECHNOLOGIES [42102-200]
