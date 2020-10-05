@@ -3,7 +3,7 @@ var arrID = [];
 var projCount = 0;
 //endpoint
 //var endpointConst = "https://portfolio-app2.herokuapp.com/";
-var endpointConst = "http://https://portfolio-app2.herokuapp.com/";
+var endpointConst = "https://portfolio-app2.herokuapp.com/";
 var request;
 
 function getProjectTitles(){
