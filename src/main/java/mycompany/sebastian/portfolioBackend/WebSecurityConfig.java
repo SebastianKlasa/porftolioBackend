@@ -80,8 +80,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         UserData appUser1 = new UserData("UserJan", passwordEncoder().encode("123"), "ROLE_USER");
         UserData appUser2 = new UserData("AdminJan", passwordEncoder().encode("123"), "ROLE_ADMIN");
        // UserData appUser3 = new UserData(null, null, null);
-        userDataRepository.save(appUser1);
-        userDataRepository.save(appUser2);
+//        userDataRepository.save(appUser1);
+//        userDataRepository.save(appUser2);
       //  userDataRepository.save(appUser3);
     }
 
