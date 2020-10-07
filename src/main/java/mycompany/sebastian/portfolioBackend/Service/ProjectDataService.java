@@ -38,6 +38,6 @@ public class ProjectDataService {
     }
 
     public void deleteById(int id){
-        projectDataRepository.deleteById(Long.valueOf(id));
+        projectDataRepository.deleteById(id);
     }
 }

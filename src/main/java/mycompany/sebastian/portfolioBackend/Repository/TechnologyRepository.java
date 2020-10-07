@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface TechnologyRepository extends JpaRepository<Technology, Long> {
+public interface TechnologyRepository extends JpaRepository<Technology, Integer> {
     Technology findByName(String name);
     Optional<Technology> findById(int id);
 }
