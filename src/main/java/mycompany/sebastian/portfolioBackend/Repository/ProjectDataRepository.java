@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface ProjectDataRepository extends JpaRepository<ProjectData, Long> {
+public interface ProjectDataRepository extends JpaRepository<ProjectData, Integer> {
     ProjectData findByTitle(String title);
     Optional<ProjectData> findById(int id);
 }

@@ -45,7 +45,7 @@ public class UserDataService implements UserDetailsService {
     }
 
     public void deleteById(int id){
-        userDataRepository.deleteById(Long.valueOf(id));
+        userDataRepository.deleteById(id);
     }
 
 }

@@ -52,7 +52,7 @@ public class ProjectDataController {
     }
 
     @DeleteMapping("/projectData/{id}")
-    public void deleteProject(int id){
+    public void deleteProject(@PathVariable int id){
         projectDataService.deleteById(id);
     }
 }
