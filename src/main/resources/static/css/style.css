@@ -698,7 +698,13 @@ h1, h2, h3, h4, h5, h6 {
       margin: 0 auto;
       width: 25%; }
     .cv .download h3 {
-      color: snow; }
+      color: snow;
+      font-size: 20px;
+      line-height: 22px; }
+      @media (max-width: 767px) {
+        .cv .download h3 {
+          line-height: 16px;
+          font-size: 14px; } }
     .cv .download a {
       text-decoration: none; }
   .cv .download:hover {
@@ -727,6 +733,10 @@ h1, h2, h3, h4, h5, h6 {
         color: ivory;
         cursor: pointer;
         text-decoration: none; }
+        @media (max-width: 767px) {
+          .projects .content .project a {
+            line-height: 12px;
+            font-size: 10px; } }
       .projects .content .project a:hover {
         color: black; }
     @media (max-width: 767px) {
@@ -789,6 +799,11 @@ h1, h2, h3, h4, h5, h6 {
     .projectDetails ul h2 {
       margin: 0;
       font-size: 20px; }
+      @media (max-width: 767px) {
+        .projectDetails ul h2 {
+          font-size: 18px;
+          line-height: 16px;
+          padding-bottom: 0.5rem; } }
   .projectDetails .buttons {
     width: 100%;
     height: auto;
