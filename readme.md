@@ -1,15 +1,28 @@
-Data structure for UserData entity
-{
-    "email":~~,
-    "userName":~~,
-    "password":~~,
-    "role": "ROLE_USER"/ "ROLE_ADMIN"
-}
+# Portfolio App
 
-Data structure for ProjectData entity
-{
-    "name":~~,
-    "sourceUrl":~~,
-    "imageUrl":~~,
-    "description": ~~
-}
+## General information
+Portfolio application
+
+### Technologies
+- Java 8
+- Spring Boot
+- JPA
+- SQL
+- H2
+- HTML
+- SCSS/CSS
+- Javascript
+
+## Setup
+Requirements:
+- Maven
+- Java 8 or higher
+- Before run application there is required to create database
+To build this project locally open project directory and run:
+```
+mvn package
+```
+To run program from Command Prompt run follow: 
+```
+java -jar target/prisonDBApp-1.0-SNAPSHOT.jar
+```
