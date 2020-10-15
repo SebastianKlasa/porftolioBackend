@@ -40,12 +40,13 @@ spring.mail.protocol=smtp
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
 ```
+Insert your port, username and password. 
 
 ### Compilation and launch
 
 Requirements:
 - Maven
-- Java 8 or higher
+- Java 8 or higher <br/>
 To build this project locally open project directory and run:
 ```
 mvn package
