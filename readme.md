@@ -10,7 +10,7 @@ Portfolio application
 - SQL
 - H2
 - HTML
-- SCSS/CSS
+- CSS
 - Javascript
 
 ## Setup
