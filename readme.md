@@ -45,7 +45,7 @@ Insert your port, username and password.
 ### Compilation and launch
 
 Requirements:
-- Maven
+- Maven 3.6.3
 - Java 8 or higher <br/>
 To build this project locally open project directory and run:
 ```
