@@ -36,31 +36,31 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers(HttpMethod.GET,"/test2").permitAll()
                 //userData permissions
-                .antMatchers(HttpMethod.GET, "/userData/id/{id}").hasRole("ADMIN")
-                .antMatchers(HttpMethod.GET, "/userData/userName/{userName}").hasRole("ADMIN")
-                .antMatchers(HttpMethod.GET, "/userData").hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/userData/id/{id}").permitAll()//.hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/userData/userName/{userName}").permitAll()//.hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/userData").permitAll()//.hasRole("ADMIN")
                 .antMatchers(HttpMethod.POST, "/userData").hasRole("ADMIN")
                 .antMatchers(HttpMethod.PUT, "/userData").hasRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/userData").hasRole("ADMIN")
                 //projectData permissions
                 .antMatchers(HttpMethod.GET, "/projectData/id/{id}").permitAll()//.hasRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/projectData").permitAll()//.hasRole("ADMIN")
-                .antMatchers(HttpMethod.POST, "/projectData").permitAll()//hasRole("ADMIN")
-                .antMatchers(HttpMethod.PUT, "/projectData").permitAll()//hasRole("ADMIN")
-                .antMatchers(HttpMethod.DELETE, "/projectData").permitAll()//hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/projectData").hasRole("ADMIN")
+                .antMatchers(HttpMethod.PUT, "/projectData").hasRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/projectData").hasRole("ADMIN")
                 //technologies
                 .antMatchers(HttpMethod.GET, "/technologies").permitAll()//.hasRole("ADMIN")
-                .antMatchers(HttpMethod.POST, "/technologies").permitAll()//hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/technologies").hasRole("ADMIN")
                 //home
                 .antMatchers(HttpMethod.GET, "/").permitAll()//.hasRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/project").permitAll()//.hasRole("ADMIN")
                 //mail
                 .antMatchers(HttpMethod.POST, "/mail").permitAll()//.hasRole("ADMIN")
                 //db console
-                .antMatchers(HttpMethod.POST, "/console").permitAll()//.hasRole("ADMIN")
-                .antMatchers(HttpMethod.GET, "/console").permitAll()//.hasRole("ADMIN")
-                .antMatchers(HttpMethod.PUT, "/console").permitAll()//.hasRole("ADMIN")
-                .antMatchers(HttpMethod.DELETE, "/console").permitAll()//.hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/console").hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/console").hasRole("ADMIN")
+                .antMatchers(HttpMethod.PUT, "/console").hasRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/console").hasRole("ADMIN")
             .and()
                 .formLogin()
                 .permitAll()
@@ -77,12 +77,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @EventListener(ApplicationReadyEvent.class)
     public void addUser(){
-        UserData appUser1 = new UserData("UserJan", passwordEncoder().encode("123"), "ROLE_USER");
-        UserData appUser2 = new UserData("AdminJan", passwordEncoder().encode("123"), "ROLE_ADMIN");
-       // UserData appUser3 = new UserData(null, null, null);
-//        userDataRepository.save(appUser1);
-//        userDataRepository.save(appUser2);
-      //  userDataRepository.save(appUser3);
+        //template for adding user through code
+
+        //UserData appUser1 = new UserData("UserJan", passwordEncoder().encode("123"), "ROLE_USER");
+        //userDataRepository.save(appUser1);
     }
 
 }

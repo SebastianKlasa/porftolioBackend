@@ -664,13 +664,17 @@ h1, h2, h3, h4, h5, h6 {
       .education .right {
         left: 0%; } }
 
+.skills h2 {
+  font-size: 20px;
+  color: #e4e4e4; }
+
 .skills .skills-img-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; }
   .skills .skills-img-container img {
     max-width: 15%;
-    max-height: 150px;
+    max-height: 100px;
     margin: auto; }
     @media (max-width: 1024px) {
       .skills .skills-img-container img {

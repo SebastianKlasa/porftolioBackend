@@ -42,8 +42,8 @@ function getProjectDetails(){
         document.getElementById("tech-list").innerHTML += "<li>"+tech.name+"</li>";
       })
       document.getElementById("gitUrl").setAttribute("href", data.gitUrl);
-      document.getElementById("action").innerHTML = data.action;
-      document.getElementById("action").setAttribute("href", data.actionOnClick);
+    //  document.getElementById("action").innerHTML = data.action;
+    //  document.getElementById("action").setAttribute("href", data.actionOnClick);
   }
   request.send();
 }
