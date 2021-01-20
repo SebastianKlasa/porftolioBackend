@@ -176,3 +176,29 @@ VALUES (100, '#', '#', 'Project consists of the 6 small projects created using v
 4. XMLFileCatalogManager<br/>
 5. PrisonDatabaseManager<br/>
 6. IMGConverter<br/>', 'https://github.com/SebastianKlasa/javaExercisesFull', 'Java Exercises') [22001-200]
+2021-01-07 20:45:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabela "TABLE_NAME" nie istnieje
+Table "TABLE_NAME" not found; SQL statement:
+INSERT INTO table_name (ID , ACTION , ACTION_ON_CLICK , DESCRIPTION, GIT_URL, TITLE )
+VALUES (null, #, #, 'Classic tic tac game with board 20x20.<br/>Visit: <a href="https://ticacame.herokuapp.com/">Click</a>', 'https://github.com/SebastianKlasa/TicTacToeGame', 'TicTac Game') [42102-200]
+2021-01-07 20:45:46 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "INSERT INTO PROJECT_DATA (ID , ACTION , ACTION_ON_CLICK , DESCRIPTION, GIT_URL, TITLE )
+VALUES (NULL,[*] #, #, 'Classic tic tac game with board 20x20.<br/>Visit: <a href=""https://ticacame.herokuapp.com/"">Click</a>', 'https://github.com/SebastianKlasa/TicTacToeGame', 'TicTac Game')"
+Syntax error in SQL statement "INSERT INTO PROJECT_DATA (ID , ACTION , ACTION_ON_CLICK , DESCRIPTION, GIT_URL, TITLE )
+VALUES (NULL,[*] #, #, 'Classic tic tac game with board 20x20.<br/>Visit: <a href=""https://ticacame.herokuapp.com/"">Click</a>', 'https://github.com/SebastianKlasa/TicTacToeGame', 'TicTac Game')"; SQL statement:
+INSERT INTO PROJECT_DATA (ID , ACTION , ACTION_ON_CLICK , DESCRIPTION, GIT_URL, TITLE )
+VALUES (null, #, #, 'Classic tic tac game with board 20x20.<br/>Visit: <a href="https://ticacame.herokuapp.com/">Click</a>', 'https://github.com/SebastianKlasa/TicTacToeGame', 'TicTac Game') [42000-200]
+2021-01-07 20:46:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "INSERT INTO PROJECT_DATA (ID , ACTION , ACTION_ON_CLICK , DESCRIPTION, GIT_URL, TITLE )
+VALUES (NULL,[*] #, #, '', 'https://github.com/SebastianKlasa/TicTacToeGame', 'TicTac Game')"
+Syntax error in SQL statement "INSERT INTO PROJECT_DATA (ID , ACTION , ACTION_ON_CLICK , DESCRIPTION, GIT_URL, TITLE )
+VALUES (NULL,[*] #, #, '', 'https://github.com/SebastianKlasa/TicTacToeGame', 'TicTac Game')"; SQL statement:
+INSERT INTO PROJECT_DATA (ID , ACTION , ACTION_ON_CLICK , DESCRIPTION, GIT_URL, TITLE )
+VALUES (null, #, #, '', 'https://github.com/SebastianKlasa/TicTacToeGame', 'TicTac Game') [42000-200]
+2021-01-07 20:46:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "INSERT INTO PROJECT_DATA (ID , ACTION , ACTION_ON_CLICK , DESCRIPTION, GIT_URL, TITLE )
+VALUES (1,[*] #, #, 'Classic tic tac game with board 20x20.<br/>Visit: <a href=""https://ticacame.herokuapp.com/"">Click</a>', 'https://github.com/SebastianKlasa/TicTacToeGame', 'TicTac Game')"
+Syntax error in SQL statement "INSERT INTO PROJECT_DATA (ID , ACTION , ACTION_ON_CLICK , DESCRIPTION, GIT_URL, TITLE )
+VALUES (1,[*] #, #, 'Classic tic tac game with board 20x20.<br/>Visit: <a href=""https://ticacame.herokuapp.com/"">Click</a>', 'https://github.com/SebastianKlasa/TicTacToeGame', 'TicTac Game')"; SQL statement:
+INSERT INTO PROJECT_DATA (ID , ACTION , ACTION_ON_CLICK , DESCRIPTION, GIT_URL, TITLE )
+VALUES (1, #, #, 'Classic tic tac game with board 20x20.<br/>Visit: <a href="https://ticacame.herokuapp.com/">Click</a>', 'https://github.com/SebastianKlasa/TicTacToeGame', 'TicTac Game') [42000-200]
