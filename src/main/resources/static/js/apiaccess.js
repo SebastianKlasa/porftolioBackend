@@ -2,8 +2,10 @@ var arr = [];
 var arrID = [];
 var projCount = 0;
 //endpoint
-var endpointConst = "https://portfolio-app2.herokuapp.com/";
+//var endpointConst = "https://portfolio-app2.herokuapp.com/";
 //var endpointConst = "http://localhost:8090/";
+var endpointConst = window.location.protocol + "//" + window.location.host.split('/')[0]+"/";
+
 var request;
 
 function getProjectTitles(){

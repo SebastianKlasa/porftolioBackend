@@ -79,8 +79,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void addUser(){
         //template for adding user through code
 
-        //UserData appUser1 = new UserData("UserJan", passwordEncoder().encode("123"), "ROLE_USER");
-        //userDataRepository.save(appUser1);
+        UserData appUser1 = new UserData("admin", passwordEncoder().encode("123"), "ROLE_ADMIN");
+        userDataRepository.save(appUser1);
     }
 
 }

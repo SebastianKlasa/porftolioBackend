@@ -787,39 +787,68 @@ h1, h2, h3, h4, h5, h6 {
           border-bottom: 35px solid transparent;
           border-left: 60px solid #BBBBBB; } }
 
-.projectDetails {
+body .container .projectDetails {
+  margin-top: 24px;
+  margin-bottom: 24px;
   display: inline-block;
   height: auto;
   width: 100%;
   color: white; }
-  .projectDetails p {
+  body .container .projectDetails p {
     float: right;
     width: 45%; }
-  .projectDetails ul {
+    body .container .projectDetails p .myButton {
+      box-shadow: inset 0px 1px 3px 0px #91b8b3;
+      background: linear-gradient(to bottom, #000000 5%, #6c7c7c 100%);
+      background-color: #00b484;
+      border-radius: 5px;
+      border: 1px solid #000000;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: Arial;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 11px 23px;
+      text-decoration: none;
+      text-shadow: 0px -1px 0px #2b665e;
+      margin: 20px;
+      text-align: center; }
+      @media (max-width: 1024px) {
+        body .container .projectDetails p .myButton {
+          font-size: 12px; } }
+    body .container .projectDetails p .myButton:hover {
+      background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+      background-color: #6c7c7c; }
+    body .container .projectDetails p .myButton:active {
+      position: relative;
+      top: 1px; }
+  body .container .projectDetails ul {
     margin-top: 3rem;
     margin-bottom: 3rem;
     float: left;
     width: 45%; }
-    .projectDetails ul h2 {
+    body .container .projectDetails ul h2 {
       margin: 0;
       font-size: 20px; }
       @media (max-width: 767px) {
-        .projectDetails ul h2 {
+        body .container .projectDetails ul h2 {
           font-size: 16px;
           line-height: 16px;
           padding-bottom: 0.5rem; } }
-  .projectDetails .buttons {
+  body .container .projectDetails .buttons {
     width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start; }
-    .projectDetails .buttons .myButton {
+    body .container .projectDetails .buttons .myButton {
       box-shadow: inset 0px 1px 3px 0px #91b8b3;
-      background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-      background-color: #768d87;
+      background: linear-gradient(to bottom, #000000 5%, #6c7c7c 100%);
+      background-color: #00b484;
       border-radius: 5px;
-      border: 1px solid #566963;
+      border: 1px solid #000000;
       display: inline-block;
       cursor: pointer;
       color: #ffffff;
@@ -832,9 +861,12 @@ h1, h2, h3, h4, h5, h6 {
       margin: 0 auto;
       width: 20%;
       text-align: center; }
-    .projectDetails .buttons .myButton:hover {
+      @media (max-width: 1024px) {
+        body .container .projectDetails .buttons .myButton {
+          font-size: 12px; } }
+    body .container .projectDetails .buttons .myButton:hover {
       background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
       background-color: #6c7c7c; }
-    .projectDetails .buttons .myButton:active {
+    body .container .projectDetails .buttons .myButton:active {
       position: relative;
       top: 1px; }
